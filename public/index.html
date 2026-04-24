@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BFHL Hierarchy Visualizer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero card">
+        <p class="tag">SRM Full Stack Challenge</p>
+        <h1>Hierarchy Analyzer</h1>
+      </section>
+
+      <section class="card form-card">
+        <label for="apiBaseUrl">API Base URL</label>
+        <input
+          id="apiBaseUrl"
+          type="text"
+          placeholder="http://localhost:3000"
+        />
+
+        <label for="nodeInput">Node List</label>
+        <textarea id="nodeInput" rows="8" placeholder="A->B&#10;A->C&#10;B->D"></textarea>
+
+        <button id="submitBtn" type="button">Analyze</button>
+        <p id="status" class="status"></p>
+      </section>
+
+      <section class="card output-card">
+        <h2>Response Preview</h2>
+        <div id="summaryBox" class="summary-grid"></div>
+        <div id="hierarchyBox" class="hierarchy-wrap"></div>
+        <pre id="rawJson" class="raw-json"></pre>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
